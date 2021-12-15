@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Ejercicio2CM_ACS</string>
+    <string name="BtnAgregar">Agregar</string>
+    <string name="BtnOrdenar">Ordenar</string>
+    <string name="BtnOrdenarDesc">Ordenar Descendente</string>
 </resources>

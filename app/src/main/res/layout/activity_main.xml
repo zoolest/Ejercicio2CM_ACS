@@ -5,6 +5,9 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/green"
+    android:backgroundTint="#63FFFFFF"
+    android:backgroundTintMode="src_over"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,7 +15,7 @@
     <EditText
         android:id="@+id/etLista"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="84dp"
         android:hint="Ingrese Numero" />
 
     <Button
@@ -20,21 +23,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
-        android:text="Agregar" />
+        android:text="@string/BtnAgregar" />
 
     <Button
         android:id="@+id/btnOrdenar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
-        android:text="Ordenar" />
+        android:text="@string/BtnOrdenar" />
 
     <Button
         android:id="@+id/btnOrdenarDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
-        android:text="Button" />
+        android:text="@string/BtnOrdenarDesc" />
 
     <ListView
         android:id="@+id/lvDatos"
