@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val lvDatos = findViewById<ListView>(R.id.lvDatos)
         val btnAgregar = findViewById<Button>(R.id.btnAgregar)
         val btnOrdenar = findViewById<Button>(R.id.btnOrdenar)
+        val btnOrdenarDesc = findViewById<Button>(R.id.btnOrdenarDesc)
 
         arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,nums)
         lvDatos.adapter = arrayAdapter
@@ -33,7 +34,13 @@ class MainActivity : AppCompatActivity() {
         }
         btnOrdenar.setOnClickListener{
             nums.sort()
-            val arrayAdapter:ArrayAdapter<*>
+            val arrayAdapter:ArrayAdapter<Int>
+            arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,nums)
+            lvDatos.adapter = arrayAdapter
+        }
+        btnOrdenarDesc.setOnClickListener{
+            nums.sortedDescending()
+            val arrayAdapter:ArrayAdapter<Int>
             arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,nums)
             lvDatos.adapter = arrayAdapter
         }
