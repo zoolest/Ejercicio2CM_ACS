@@ -11,23 +11,18 @@ import android.widget.ListView
 private lateinit var etLista: EditText
 
 class MainActivity : AppCompatActivity() {
-    //private  val numeros = mutableListof
-  // private val numeros:MutableList<Int> = mutableListOf()
 
     private val numeros: MutableList<Int>? = null
-    //val lvDatos = findViewById<ListView>(R.id.ListView)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         etLista = findViewById(R.id.etLista)
         val arrayAdapter:ArrayAdapter<*>
-        //val numeros:MutableList<Int> = mutableListOf()
-        //val nums= mutableListOf("Juan","Pedro","juana")
         val nums= mutableListOf<Int>()
         val lvDatos = findViewById<ListView>(R.id.lvDatos)
         val btnAgregar = findViewById<Button>(R.id.btnAgregar)
-
+        val btnOrdenar = findViewById<Button>(R.id.btnOrdenar)
 
         arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,nums)
         lvDatos.adapter = arrayAdapter
@@ -35,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         btnAgregar.setOnClickListener {
             val num= Integer.parseInt(etLista.text.toString())
             nums.add(num)
+        }
+        btnOrdenar.setOnClickListener{
+            nums.sort()
+            val arrayAdapter:ArrayAdapter<*>
+            arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,nums)
+            lvDatos.adapter = arrayAdapter
         }
 
 
